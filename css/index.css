@@ -12,7 +12,8 @@ li {
   src: url(../font/DS-DIGIT.TTF);
 }
 body {
-  background: url(../images/bg.jpg) no-repeat top center;
+  background: url(../images/bg1.jpg) no-repeat top center;
+  background-size: cover;
   line-height: 1.15;
 }
 header {
@@ -24,7 +25,7 @@ header {
 header h1 {
   font-size: 0.475rem;
   color: #fff;
-  margin-left: 43%;
+  margin-left: 30%;
   line-height: 1rem;
 }
 header .showTime {

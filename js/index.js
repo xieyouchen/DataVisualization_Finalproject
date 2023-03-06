@@ -7,7 +7,7 @@ $(function () {
       $(this).addClass("nav_active").siblings().removeClass("nav_active");
       $(".index_tabs .inner").eq(index).fadeIn().siblings("div").stop().hide();
       if (index == 1) {
-        highway();
+        bus();
       }
       
     })
@@ -1266,7 +1266,7 @@ function drawModel(k) {
     return res;
   };
 
-  var color = ["#F8B448", "#D4DF45", "#46bee9", "#71b119"]; //航线的颜色
+  var color = ["#F8B448", "#D4DF45", "#46bee9", "#EDA9BD"]; //航线的颜色
   var myOption = [];
   [
     ["上海", shangHai525],
@@ -1360,7 +1360,9 @@ function drawModel(k) {
 
   var year = ['5.25', '5.26', '5.27', '5.28']
   var option = {
+    //基础数据，包括地图以及时间轴
     baseOption: {
+      //时间轴
       timeline: {
         axisType: 'category',
         autoPlay: true,
@@ -1401,6 +1403,7 @@ function drawModel(k) {
           },
         },
       },
+      //提示窗
       tooltip: {
         trigger: "item",
         formatter: function (params, ticket, callback) {
@@ -1419,16 +1422,7 @@ function drawModel(k) {
           }
         }
       },
-      legend: {
-        orient: "vertical",
-        top: "bottom",
-        left: "right",
-        data: ["西安 Top3", "西宁 Top3", "银川 Top3"],
-        textStyle: {
-          color: "#fff"
-        },
-        selectedMode: "multiple"
-      },
+      //中国地图
       geo: {
         map: "china",
         label: {
@@ -1454,6 +1448,7 @@ function drawModel(k) {
       },
       series: [],
     },
+    // 我的数据
     options: myOption
   };
   option && myChart.setOption(option);
@@ -1464,7 +1459,7 @@ function drawModel(k) {
 })();
 
 
-function highway() {
+function bus() {
   $(function () {
     // 1实例化对象
     var myChart = echarts.init(document.querySelector(".bar3 .chart"));
