@@ -2,6 +2,7 @@
 
 <center><b><font size='6'>2022年上海疫情爆发期间交通数据可视化分析
 <center>《数据可视化》课程期末项目报告-选题：地理数据可视化
+
 ![image-20230310151142081](README.assets/image-20230310151142081.png)
 
 ![image-20230310151241408](README.assets/image-20230310151241408.png)
